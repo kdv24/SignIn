@@ -1,7 +1,7 @@
 <div class="container whos-here">
     <h3 ng-show="students.length && filtered.length">Here</h3>
     <h3 ng-show="students.length && !filtered.length">Not here</h3>
-    <ul ng-repeat="item in students = (students | filter:query)">
+    <ul ng-repeat="item in students = (students | filter:query | item.present )">
       <li>{{item.name}}</li>
     </ul>
 </div>
