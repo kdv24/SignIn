@@ -3,53 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <script src="lib/angular.js"></script>
+    <script src="lib/angular-ui-router.js"></script>
     <script src="app.js"></script>
     <script src="controllers/SignInController.js"></script>
     <script src="controllers/WhoIsHereController.js"></script>
     <script src="services/AttendanceFactory.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Student Sign In</title>
   </head>
   <body>
     <div class="container">
       <p>Sign In | Who's here</h1>
       <div ui-view></div>
-    </div>
-    <div class="container home">
-      <div ng-controller="SignInCtrl">
-        <h1>Welcome</h1>
-        <h3>We're so glad you're here</h3>
-        <div ng-click="">
-          <button class="btn btn-success" name="sign-in"></button>
-        </div>
-        <div ng-click="">
-          <button class="btn btn-primary" name="whos-here"></button>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div class="container sign-in">
-      <h2>Please sign in</h2>
-      <!-- STUDENT NAMES ITERATE HERE each with own buttons-->
-      <p>Student Names</p>
-      <div ng-click="">
-        <button class="btn btn-default" name="student-sign-in"></button>
-      </div>
-      <div ng-click="">
-        <button class="btn btn-warning" name="student-sign-out"></button>
-      </div>
-    </div>
-    <div class="container whos-here">
-      <h3>Here</h3>
-      <ul ng-repeat="">
-        <li>list of students who are here (boolean)</li>
-      </ul>
-      <h3>Not here</h3>
-      <ul ng-repeat="">
-        <li>list of students who are not here (opposite boolean)</li>
-      </ul>
     </div>
   </body>
 </html>
