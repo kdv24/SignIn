@@ -2,7 +2,6 @@
     <h3 ng-show="students.length && filtered.length">Here</h3>
     <h3 ng-show="students.length && !filtered.length">Not here</h3>
     <ul ng-repeat="item in students = (students | filter:query)">
-      <li>item.name</li>
-      <h1>Boo!</h1>
+      <li>{{item.name}}</li>
     </ul>
 </div>

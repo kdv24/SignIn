@@ -1,5 +1,5 @@
 signIn.factory('AttendanceFactory', function AttendanceFactory() {
     var factory = {};
-    factory.students = [{name: factory.studentName, present: false}, {name: "Kelly", present: false}, {name: "Abeer", present: false}];
+    factory.students = [{name: "Kelly", present: false}, {name: "Abeer", present: false}, {name: "Cynthia", present: false}];
     return factory;
 });
