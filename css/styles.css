@@ -1,3 +1,7 @@
 .white-text a {
   color: white;
 }
+
+ul {
+  list-style: none;
+}

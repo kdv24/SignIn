@@ -14,8 +14,18 @@
   </head>
   <body>
     <div class="container">
-      <p>Sign In | Who's here</h1>
-      <div ui-view></div>
+      <!-- <p><a ui-sref="check-in-page">Sign In</a> | <a ui sref="who-is-here">Who's here</a></p> -->
+      <h1>Welcome</h1>
+      <h3>We're so glad you're here</h3>
+      <div class="container">
+        <div id="row">
+          <button class="btn btn-success white-text"><a ui-sref='check-in-page'>Sign In</a></button>
+      </br></br>
+          <button class="btn btn-primary white-text"><a ui-sref="who-is-here">Who's here</a></button>
+        </div>
+      </div>
+
+      <!-- <div ui-view></div> -->
     </div>
   </body>
 </html>

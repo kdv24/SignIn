@@ -1,10 +1,8 @@
 <div class="container whos-here">
-  <h3>Here</h3>
-  <ul ng-repeat="">
-    <li>list of students who are here (boolean)</li>
-  </ul>
-  <h3>Not here</h3>
-  <ul>
-    <li>list of students who are not here (opposite boolean)</li>
-  </ul>
+    <h3 ng-show="students.length && filtered.length">Here</h3>
+    <h3 ng-show="students.length && !filtered.length">Not here</h3>
+    <ul ng-repeat="item in students = (students | filter:query)">
+      <li>item.name</li>
+      <h1>Boo!</h1>
+    </ul>
 </div>

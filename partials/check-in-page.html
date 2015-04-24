@@ -1,24 +1,26 @@
 <div class="container sign-in">
-  <h2>Please sign in</h2>
-  <!-- STUDENT NAMES ITERATE HERE each with own buttons-->
-  <div ng-show="students.length"class="container">
-    <div class="row">
-      <ul>
-        <li ng-repeat="item in students">
-          {{ item.name }}
+  <div ng-controller="SignInCtrl">
+    <h2>Please sign in</h2>
+    <div ng-show="students.length"class="container">
+      <div class="row">
+        <ul>
+          <li ng-repeat="item in students"></br>
+            {{ item.name }}
+            <div class="col-md-4">
+              <div ng-click="present = true">
+                <br>
+                <button ng-model="item.present" class="btn btn-default" name="student-sign-in"><a ng-click="checkIn(item)">Sign In</a></button>
+              </div>
+            </div>
+          </br>
           <div class="col-md-4">
-            <div ng-submit="SignInController.checkIn()">
-              <button ng-model="SignInController.present" class="btn btn-default" name="student-sign-in">Sign In</button>
+            <div ng-click="present = false">
+              <button ng-model="" class="btn btn-warning" name="student-sign-out">Sign Out</button>
             </div>
           </div>
-        </br>
-        <div class="col-md-4">
-          <div ng-click="">
-            <button class="btn btn-warning" name="student-sign-out">Sign Out</button>
-          </div>
-        </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

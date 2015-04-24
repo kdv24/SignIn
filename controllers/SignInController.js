@@ -1,6 +1,5 @@
-signIn.controller("SignInCtrl", function SignInCtrl($scope, AttendanceFactory) {
-    $scope.students = AttendanceFactory.students;
-    $scope.checkIn = function(student) {
-        student.present = true;
+signIn.controller("SignInCtrl", function SignInCtrl($scope, $stateParams, AttendanceFactory) {
+    $scope.students = StudentsFactory.students;
+    $scope.StudentsFactory = StudentsFactory;
     }
 });
