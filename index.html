@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="signIn">
+    <head>
+        <meta charset="UTF-8">
+        <script src="lib/angular.js"></script>
+        <script src="app.js"></script>
+        <script src="controllers/SignInController.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <title>Student Sign In</title>
+    </head>
+    <body>
+        <div class="container">
+            <p>Sign In | Who's here</h1>
+        </div>
+        <div class="container home">
+            <h1>Welcome</h1>
+            <h3>We're so glad you're here</h3>
+            <button class="btn btn-success" name="sign-in"></button>
+            <button class="btn btn-primary" name="whos-here"></button>
+        </div>
+        <div class="container sign-in">
+            <h2>Please sign in</h2>
+            <!-- STUDENT NAMES ITERATE HERE each with own buttons-->
+            <p>Student Names</p>
+            <button class="btn btn-default" name="student-sign-in"></button>
+            <button class="btn btn-warning" name="student-sign-out"></button>
+        </div>
+        <div class="container whos-here">
+            <h3>Here</h3>
+            <ul>
+                <li>list of students who are here (boolean)</li>
+            </ul>
+            <h3>Not here</h3>
+            <ul>
+                <li>list of students who are not here (opposite boolean)</li>
+            </ul>
+        </div>
+    </body>
+</html>
+
+
+</html>
