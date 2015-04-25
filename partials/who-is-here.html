@@ -1,7 +1,13 @@
 <div class="container whos-here">
-    <h3 ng-show="students.length && filtered.length">Here</h3>
-    <h3 ng-show="students.length && !filtered.length">Not here</h3>
-    <ul ng-repeat="item in students = (students | filter:query | item.present )">
-      <li>{{item.name}}</li>
-    </ul>
+<div class="container sign-in">
+  <a ui-sref="check-in-page">Sign in</a> |
+  <a ui-sref="who-is-here">Who's here</a>
+<h1>Attendance today</h1>
+    <h3 ng-show="present.length && filtered.length">Here</h3>
+       <li ng-repeat="item in present = (students | filter:{present:true} )">
+      	{{item.name}}</li>
+
+    <h3 ng-show="present.length && !filtered.length">Not here</h3>
+    	<li ng-repeat="item in present = (students | filter:{present:false} )">
+      	{{item.name}}</li>
 </div>

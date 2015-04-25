@@ -1,24 +1,15 @@
 <div class="container sign-in">
-  <div ng-controller="SignInCtrl">
-    <h2>Please sign in</h2>
-    <div class="container">
-      <div class="row">
-        <ul ng-repeat="item in students">
-            <div class="name">
-              {{item.name}}
-            <div ng-show="!item.present">
-              <a ng-click="studentPresent(item)">
-                <button type="submit" class="btn btn-danger" >Sign In</button>
-              </a>
-            </div>
-            <div ng-show="item.present">
-              <a ng-click="studentAbsent(item)">
-                <button type="submit" class="btn btn-warning" >Sign Out</button>
-              </a>
-            </div>
-          </div>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <a ui-sref="check-in-page">Sign in</a> |
+  <a ui-sref="who-is-here">Who's here</a>
+<!--   <div ng-controller="SignInCtrl">
+ --><h2>Please sign in</h2>
+
+<!--     <div class="container">
+      <div class="row"> -->
+        <li ng-repeat="item in students">
+            {{ item.name }} 
+                <button class="btn btn-danger" ng-click="studentPresent(item)" ng-show="!item.present">Sign In</button>
+  
+                <button class="btn btn-warning" ng-click="studentAbsent(item)" ng-show="item.present">Sign Out</button>
+        </li>
 </div>
